@@ -9,10 +9,11 @@
 void guess_num();
 void hangman();
 void tictactoe();
+void rockpaper();
 
 int main()
 {
-    int x;
+    char x;
     printf("\n\n");
     printf("****ARCADE GAMES******\n\n");
     printf("   • LIST OF GAMES\n");
@@ -20,37 +21,39 @@ int main()
     printf("   2. GUESS THE NUMBER\n");
     printf("   3. HANGMAN\n");
     printf("   4. ROCK-PAPER-SCISSOR\n");
-    printf("   5. Allan OP\n");
+    printf("   5. DO NOT ENTER\n");
     printf("   6. QUIT\n\n");
     printf("   • ENTER AN OPTION: ");
-    scanf("%d",&x);
+    x = getche();
     
     switch(x){
-        case 1: tictactoe();
+        case '1': tictactoe();
         break;
         
-        case 2: guess_num();
+        case '2': guess_num();
         break;
 
-        case 3: hangman();
+        case '3': hangman();
         break;
 
-        case 4:
-        printf("the code for rock-paper-scissor");
+        case '4':
+        printf("\nthe code for rock-paper-scissor");
         break;
 
-        case 5:
-        printf("Unknown game");
+        case '5':
+        for(int i=0;;i++)
+        printf("\nOmae Wa Mou Shinderu");
         break;
 
-        case 6:
+        case '6':
         printf("\n\t Thank you"); 
         return 0;
         
-        default : printf("enter a vaid option");
+        default : printf("\nenter a vaid option");
     }
 
     main();
+    return 0;
 }
 
 
@@ -92,7 +95,7 @@ void guess_num(){
 void hangman()
 {
 int i,j,c,count=0,ans=0,flag=0,index;
-char a[10][10]={"sahil","java","python","haskell","brainfuck","javascript"};
+char a[10][10]={"sahil","java","katherine","haskell","brainfuck","javascript"};
 char b[10],alpha,choice;
 char d='_';
 
@@ -208,7 +211,7 @@ void tictactoe()
             printf("Invalid move ");
 
             player--;
-            getch();
+            
         }
         i = checkwin();
 
@@ -276,25 +279,3 @@ int checkwin()
         return  - 1;
 }
 void board()
-{
-    /*system("cls");*/
-    printf("\n\n\tTic Tac Toe\n\n");
-
-    printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
-
-
-    printf("     |     |     \n");
-    printf("  %c  |  %c  |  %c \n", square[1], square[2], square[3]);
-
-    printf("_____|_____|_____\n");
-    printf("     |     |     \n");
-
-    printf("  %c  |  %c  |  %c \n", square[4], square[5], square[6]);
-
-    printf("_____|_____|_____\n");
-    printf("     |     |     \n");
-
-    printf("  %c  |  %c  |  %c \n", square[7], square[8], square[9]);
-
-    printf("     |     |     \n\n");
-}
