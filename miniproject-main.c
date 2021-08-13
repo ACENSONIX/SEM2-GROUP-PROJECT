@@ -73,7 +73,6 @@ void guess_num(){
 
     srand(time(0));
     number = rand()%100 + 1; // Generates a number between 1 to 100
-    number = 50;
     do
     {   
         printf("\n\nGuess a number between 1 to 100: ");
@@ -112,7 +111,6 @@ char d='_';
 
 srand(time(0));
 index = rand()%10;
-index=2;
 c=strlen(&a[index][0]);
 printf("\n\n\t\t\t ** HANGMAN ** \n");
 	printf("\n\t\t\t**************\t\t\t");
