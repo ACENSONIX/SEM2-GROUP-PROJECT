@@ -456,4 +456,4 @@ void win(char comp, char player)
     {
         printf(" IT IS A DRAW!");
     }
-
+}
