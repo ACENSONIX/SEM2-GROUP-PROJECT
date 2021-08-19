@@ -357,7 +357,7 @@ void board()
 
     printf("  %c  |  %c  |  %c \n", square[7], square[8], square[9]);
 
-    printf("     |     |     \n\n")
+    printf("     |     |     \n\n");
 }
 void reset_board(char square[])
 {
