@@ -4,7 +4,7 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
-//changes
+
 void red()
 {
     printf("\033[1;31m");
@@ -108,7 +108,7 @@ void guess_num()
     char choice;
 
     srand(time(0));
-    number = rand() % 100 + 1; // Generates a number between 1 to 100
+    number = rand() % 100 + 1;
     do
     {
         printf("\n\nGuess a number between 1 to 100: ");
