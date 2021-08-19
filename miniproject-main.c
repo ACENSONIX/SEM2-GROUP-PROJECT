@@ -358,7 +358,7 @@ void board()
     printf("  %c  |  %c  |  %c \n", square[7], square[8], square[9]);
 
     printf("     |     |     \n\n")
-
+}
 void reset_board(char square[])
 {
     for (int i = 0; i <= 10; i++)
